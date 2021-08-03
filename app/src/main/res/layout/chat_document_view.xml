@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/chatDocumentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:maxWidth="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_margin="5dp"
+    android:background="@drawable/round_bg_no_stroke_teal700">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/pdf_llayout"
+        android:layout_width="250dp"
+        android:orientation="horizontal"
+        android:background="#90B8B4"
+        android:layout_margin="6dp"
+        android:padding="2dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chat_imgview"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            android:src="@drawable/ic_baseline_picture_as_pdf_24"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:id="@+id/document_name_tv"
+            android:layout_gravity="center_vertical"
+            android:text="testing_document_length.pdf"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_weight="0.75"
+            android:drawableEnd="@drawable/ic_baseline_open_in_new_24"
+            android:scrollbars="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/type_time_llayout"
+        android:layout_width="250dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum="1"
+        android:layout_below="@id/pdf_llayout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/document_time_date_Tv"
+            android:text="30-05-2021  05:30"
+            android:textSize="12sp"
+            android:layout_weight="0.6"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/document_type_tv"
+            android:text="PDF"
+            android:textSize="12sp"
+            android:textAlignment="textEnd"
+            android:layout_weight="0.4"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</RelativeLayout>

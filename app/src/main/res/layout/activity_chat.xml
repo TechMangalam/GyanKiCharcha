@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/chat_toolbar"
+        app:title="Gyan Ki Charcha"
+        android:elevation="20dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="5dp"
+        app:subtitle="online"
+        android:background="?attr/colorPrimaryVariant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlSymmetry" />
+
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:elevation="10dp"
+        android:id="@+id/userInfoLayout"
+        android:visibility="gone"
+        android:background="@color/teal_700"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/profile_image"
+            app:civ_border_width="1dp"
+            app:civ_border_color="?attr/colorControlNormal"
+            android:src="@drawable/profile_icon"/>
+
+
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Unknown"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_below="@+id/profileName"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="24/07/2020"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:layout_margin="1dp"
+            android:id="@+id/moreMenuChat"
+            android:padding="5dp"
+            android:background="@color/teal_700"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:padding="2dp"
+        android:paddingBottom="4dp"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
+        android:visibility="visible"
+        android:layout_marginTop="1dp"
+        android:id="@+id/queChatRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chat_toolbar"
+        android:layout_above="@+id/chatToolRtl" />
+
+    <RelativeLayout
+        android:id="@+id/chatToolRtl"
+        android:padding="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="3dp"
+        android:elevation="20dp"
+        android:background="@drawable/round_stroke_white_gray_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/chat_msg_editTEXT"
+            android:maxHeight="100dp"
+            android:layout_marginStart="5dp"
+            android:hint="Your message here.."
+            android:textSize="18sp"
+            android:padding="7dp"
+            android:layout_toStartOf="@id/chat_attachment_imgView"
+            android:background="@null"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/chat_attachment_imgView"
+            android:layout_marginHorizontal="2dp"
+            android:padding="7dp"
+            android:layout_centerVertical="true"
+            android:elevation="20dp"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            android:layout_toStartOf="@id/chat_send_imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/chat_send_imgView"
+            android:layout_marginHorizontal="2dp"
+            android:elevation="20dp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:padding="7dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/attachmentContentRelLayout"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:background="@drawable/round_corner_translucent_teel_bg"
+        android:layout_above="@id/chatToolRtl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:rowCount="2"
+            android:columnCount="3"
+            android:padding="10dp"
+            android:layout_marginVertical="5dp"
+            android:layout_centerHorizontal="true"
+            android:useDefaultMargins="true"
+            android:rowOrderPreserved="true"
+            android:columnOrderPreserved="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_attachment_card"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_image_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/file_attachment_card"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_file_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/music_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_library_music_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/camera_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/video_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_video_library_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/custom_emoji_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_insert_emoticon_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

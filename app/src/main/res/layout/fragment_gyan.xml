@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.gyan.GyanFragment">
+
+    <Spinner
+        android:elevation="16dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dialog"
+        android:popupBackground="@android:color/white"
+        android:padding="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/searchTv"
+        android:id="@+id/spinnerMenu"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:elevation="16dp"
+        android:background="@color/purple_500"
+        android:id="@+id/searchTv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="Search"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/spinnerMenu"
+        android:id="@+id/post_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_create_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryVariant"
+        app:title="Create Post"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_below="@id/toolbar_create_post"
+        android:scrollbars="vertical"
+        android:layout_above="@id/bottom_tools_rtl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/post_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:hint="Type your message here..."
+                app:boxCornerRadiusBottomEnd="14dp"
+                android:padding="5dp"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_baseline_edit_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/post_text_text_input_field"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/create_post_shapable_iv"
+                android:layout_below="@id/post_text_input_layout"
+                android:layout_marginHorizontal="10dp"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+            <ImageButton
+                android:id="@+id/removeAttachedImageBtn"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/post_text_input_layout"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <VideoView
+                android:id="@+id/create_post_video_view"
+                android:layout_marginHorizontal="10dp"
+                android:visibility="gone"
+                android:layout_below="@id/create_post_shapable_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/exoplayer_post"
+                android:visibility="gone"
+                android:layout_below="@id/create_post_video_view"
+                android:layout_marginHorizontal="5dp"
+                app:surface_type="texture_view"
+                app:show_buffering="always"
+                app:buffered_color="@color/teal_200"
+                app:repeat_toggle_modes="none"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/postAttachmentActionBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_attach_file_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/attachmentContentRelLayout"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:background="@drawable/round_corner_translucent_teel_bg"
+        android:layout_above="@id/postAttachmentActionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:rowCount="2"
+            android:columnCount="3"
+            android:padding="10dp"
+            android:layout_marginVertical="5dp"
+            android:layout_centerHorizontal="true"
+            android:useDefaultMargins="true"
+            android:rowOrderPreserved="true"
+            android:columnOrderPreserved="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_attachment_card"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_image_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/file_attachment_card"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_file_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/music_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_library_music_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/camera_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/video_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_video_library_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:id="@+id/custom_emoji_attachment_card"
+                app:cardElevation="10dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="20dp"
+                    android:src="@drawable/ic_baseline_insert_emoticon_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_tools_rtl"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/attachment_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageAttachImageBtn"
+                android:padding="5dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_image_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/cameraAttachImageBtn"
+                android:padding="5dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/videoAttachImageBtn"
+                android:padding="5dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_video_library_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/documentAttachImageBtn"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_picture_as_pdf_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/emojiAttachImageBtn"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_insert_emoticon_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/visibilityAttachImageBtn"
+                android:padding="5dp"
+                android:layout_gravity="end"
+                android:background="@drawable/custom_bordered_ripple"
+                android:src="@drawable/ic_baseline_visibility_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/upload_post_btn"
+                android:padding="5dp"
+                android:clickable="false"
+                android:src="@drawable/ic_baseline_send_24"
+                android:background="@drawable/custom_bordered_ripple"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

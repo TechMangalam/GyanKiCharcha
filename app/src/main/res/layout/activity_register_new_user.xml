@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:forceDarkAllowed="false"
+
+    tools:context=".RegisterNewUserActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/app_icon1_foreground"
+        android:layout_width="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="70dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@id/logo"
+        android:text="New user registration"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_margin="20dp"
+        android:layout_below="@id/title"
+        android:background="@drawable/round_white_no_border_20r"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/profileNametv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:drawableStart="@drawable/profile_icon"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/profileName"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:layout_below="@+id/profileNametv"/>
+
+            <TextView
+                android:id="@+id/emailProfile"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/profileName"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:layout_below="@+id/emailProfile"/>
+
+            <TextView
+                android:id="@+id/phoneProfile"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PhoneNo"
+                android:drawableStart="@drawable/ic_baseline_phone_enabled_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/email"/>
+
+            <EditText
+                android:id="@+id/phoneEdt"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:layout_below="@+id/phoneProfile"/>
+
+            <TextView
+                android:id="@+id/countryTitle"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:drawableStart="@drawable/ic_baseline_work_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/phoneEdt"/>
+
+            <Spinner
+                android:background="@drawable/spinner_bg_white"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@android:color/white"
+                android:paddingStart="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/countryTitle"
+                android:id="@+id/countryMenu"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/div1"
+                android:layout_below="@id/countryMenu"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/stateTitle"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:drawableStart="@drawable/ic_baseline_work_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/countryMenu"/>
+
+            <Spinner
+                android:background="@drawable/spinner_bg_white"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@android:color/white"
+                android:paddingStart="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/stateTitle"
+                android:id="@+id/stateMenu"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/div4"
+                android:layout_below="@id/stateMenu"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/interestsTitle"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interest(1)"
+                android:drawableStart="@drawable/ic_baseline_favorite_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/stateMenu"/>
+
+            <Spinner
+                android:background="@drawable/spinner_bg_white"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@android:color/white"
+                android:paddingStart="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/interestsTitle"
+                android:id="@+id/interestsMenu"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/div2"
+                android:layout_below="@id/interestsMenu"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/interests2Title"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Interest(2)"
+                android:drawableStart="@drawable/ic_baseline_favorite_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/div2"/>
+
+            <Spinner
+                android:background="@drawable/spinner_bg_white"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@android:color/white"
+                android:paddingStart="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/interests2Title"
+                android:id="@+id/interests2Menu"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/div3"
+                android:layout_below="@id/interests2Menu"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/passwordT"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create password"
+                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@id/div3"/>
+
+            <EditText
+                android:id="@+id/passwordEdt"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:password="true"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:layout_below="@+id/passwordT"/>
+
+            <TextView
+                android:id="@+id/rPasswordT"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm password"
+                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+                android:drawablePadding="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:layout_below="@+id/passwordEdt"/>
+
+            <EditText
+                android:id="@+id/cPasswordEdt"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:layout_below="@+id/rPasswordT"/>
+
+            <Button
+                android:text="Register new user"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:id="@+id/register"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cPasswordEdt"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/register"
+                android:id="@+id/signUpToIn"
+                android:text="Already a user, SignIn"
+                android:textColor="@color/teal_200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progBarRegister"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

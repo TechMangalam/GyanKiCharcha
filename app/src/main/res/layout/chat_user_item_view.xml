@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="20dp"
+    android:id="@+id/userInfoLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            app:civ_border_color="?attr/colorControlNormal"
+            android:id="@+id/profile_image"
+            app:civ_border_width=".5dp"
+            android:src="@drawable/profile_img"/>
+
+
+        <RelativeLayout
+            android:paddingTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bottom_border"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:text="Unknown"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:singleLine="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="3.5"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/recent_msg_time_tv"
+                    android:text="12:50 pm"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:layout_gravity="end"
+                    android:textAlignment="textEnd"
+                    android:layout_weight=".5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_below="@+id/ll1"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Recent Msg"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

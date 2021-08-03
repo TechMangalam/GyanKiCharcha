@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#018786"
+         />
+
+    <View
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave"
+        android:layout_below="@+id/topView" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="20dp"
+        app:srcCompat="@drawable/ic_baseline_emoji_people"
+        tools:ignore="ContentDescription"
+        android:layout_toRightOf="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="-35dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/baloo"
+        android:letterSpacing="0.2"
+        android:text="Gyani"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+       android:layout_below="@id/topView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/baloo"
+        android:text="Login to continue..."
+        android:textSize="20sp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@+id/topView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="true"
+        android:hint="Email *"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:padding="5dp"
+        android:textColorHint="#80018786"
+        app:boxBackgroundColor="#20018786"
+        app:boxStrokeColor="#018786"
+        app:endIconMode="clear_text"
+        app:helperText="* Required"
+        app:hintTextColor="#018786"
+        android:layout_below="@+id/textView2"
+        app:startIconDrawable="@drawable/material_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="true"
+        android:hint="Phone No"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:padding="5dp"
+        android:textColorHint="#80018786"
+        app:boxBackgroundColor="#20018786"
+        app:boxStrokeColor="#018786"
+        app:endIconMode="clear_text"
+        app:hintTextColor="#018786"
+        android:layout_below="@+id/emailInput"
+        app:startIconDrawable="@drawable/material_phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="true"
+        android:hint="Password *"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:padding="5dp"
+        android:textColorHint="#80018786"
+        app:boxBackgroundColor="#20018786"
+        app:boxStrokeColor="#018786"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="#018786"
+        android:layout_below="@+id/phoneInput"
+        app:startIconDrawable="@drawable/material_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/forgot_pass_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:padding="5dp"
+        android:text="Forgot Password?"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:textColor="#018786"
+        android:textSize="12sp"
+        android:layout_below="@+id/passwordInput" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:padding="15dp"
+        android:text="Login"
+        android:background="@drawable/ripple"
+
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_below="@+id/forgot_pass_btn" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New User? Sign Up"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textColor="#018786"
+        android:layout_below="@+id/login_btn" />
+
+            <TextView
+                android:id="@+id/bitAAM_pride_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Made in Bharat by bitAAM"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/signup_btn"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>
