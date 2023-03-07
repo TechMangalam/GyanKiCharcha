@@ -39,6 +39,7 @@ import com.bitaam.gyankicharcha.ui.chat.ChatFragment;
 import com.bitaam.gyankicharcha.ui.gyan.GyanFragment;
 import com.bitaam.gyankicharcha.ui.post.PostFragment;
 import com.bitaam.gyankicharcha.ui.profile.ProfileFragment;
+import com.bitaam.gyankicharcha.utillity.Encryptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -83,46 +84,18 @@ public class MainActivity extends AppCompatActivity {
 
         requestForSpecificPermission();
 
-
-//        File tarjeta = Environment.getExternalStorageDirectory();
-//        Toast.makeText(this, tarjeta.getAbsolutePath(), Toast.LENGTH_SHORT).show();
-//        File logFile = new File(tarjeta.getAbsolutePath()+"/DCIM/", "log.txt");
-//        if (!logFile.exists())
-//        {
-//            try
-//            {
-//                logFile.createNewFile();
-//            }
-//            catch (IOException e)
-//            {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//            }
-//        }
-//        try {
-//            FileOutputStream fileout=openFileOutput("mytext.txt", MODE_PRIVATE);
-//            OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
-//            outputWriter.write("textmsg.getText().toString()");
-//            outputWriter.close();
-//
-//            //display file saved message
-//            Toast.makeText(getBaseContext(), "File saved successfully!",
-//                    Toast.LENGTH_SHORT).show();
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
-
-        //saveToInternalStorage(((BitmapDrawable)getDrawable(R.drawable.profile_img)).getBitmap());
-//        updateService = new ChatBackgroundUpdateService();
-//        mServiceIntent = new Intent(this, updateService.getClass());
-//        if (!isMyServiceRunning(updateService.getClass())) {
-//            startService(mServiceIntent);
-//        }
+        testEncrptions();
 
 
 
+
+    }
+
+    private void testEncrptions() {
+
+        Encryptions encryptions = new Encryptions();
+        String en = encryptions.getEncreption("Mangalam Pandey","User1User1","User2User2");
+        encryptions.getDecreption(en,"User2User2","User1User1");
 
     }
 
@@ -208,27 +181,27 @@ public class MainActivity extends AppCompatActivity {
                         //if (interstitialAd.isLoaded())
                         //interstitialAd.show();
                         break;
-                    case R.id.navigation_gyan:
-                        fragment = new GyanFragment();
-                        homeFlag = false;
-                        //toolbar.setTitle("Ask Doctor");
-                        //if (interstitialAd.isLoaded())
-                        //interstitialAd.show();
-                        break;
-                    case R.id.navigation_mycourse:
-                        fragment = new MyCourseFragment();
-                        homeFlag = false;
-                        //toolbar.setTitle("Yoga");
-                        //if (interstitialAd.isLoaded())
-                        //interstitialAd.show();
-                        break;
-                    case R.id.navigation_profile:
-                        fragment = new ProfileFragment();
-                        homeFlag = false;
-                        //toolbar.setTitle("Bhajan");
-                        //if (interstitialAd.isLoaded())
-                        //interstitialAd.show();
-                        break;
+//                    case R.id.navigation_gyan:
+//                        fragment = new GyanFragment();
+//                        homeFlag = false;
+//                        //toolbar.setTitle("Ask Doctor");
+//                        //if (interstitialAd.isLoaded())
+//                        //interstitialAd.show();
+//                        break;
+//                    case R.id.navigation_mycourse:
+//                        fragment = new MyCourseFragment();
+//                        homeFlag = false;
+//                        //toolbar.setTitle("Yoga");
+//                        //if (interstitialAd.isLoaded())
+//                        //interstitialAd.show();
+//                        break;
+//                    case R.id.navigation_profile:
+//                        fragment = new ProfileFragment();
+//                        homeFlag = false;
+//                        //toolbar.setTitle("Bhajan");
+//                        //if (interstitialAd.isLoaded())
+//                        //interstitialAd.show();
+//                        break;
 
                 }
 

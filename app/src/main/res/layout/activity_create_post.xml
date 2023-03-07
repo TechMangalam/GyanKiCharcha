@@ -237,86 +237,86 @@
 
     <RelativeLayout
         android:id="@+id/bottom_tools_rtl"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:id="@+id/attachment_linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="0dp"
             android:layout_centerVertical="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="0dp">
 
             <ImageButton
                 android:id="@+id/imageAttachImageBtn"
-                android:padding="5dp"
-                android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_image_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_image_24" />
 
             <ImageButton
                 android:id="@+id/cameraAttachImageBtn"
-                android:padding="5dp"
-                android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_photo_camera_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_photo_camera_24" />
 
             <ImageButton
                 android:id="@+id/videoAttachImageBtn"
-                android:padding="5dp"
-                android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_video_library_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_video_library_24" />
 
             <ImageButton
                 android:id="@+id/documentAttachImageBtn"
-                android:padding="5dp"
-                android:visibility="gone"
-                android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_picture_as_pdf_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_picture_as_pdf_24"
+                android:visibility="gone" />
 
             <ImageButton
                 android:id="@+id/emojiAttachImageBtn"
-                android:padding="5dp"
-                android:visibility="gone"
-                android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_insert_emoticon_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bordered_ripple"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_insert_emoticon_24"
+                android:visibility="gone" />
 
             <ImageButton
                 android:id="@+id/visibilityAttachImageBtn"
-                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:background="@drawable/custom_bordered_ripple"
-                android:src="@drawable/ic_baseline_visibility_24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_visibility_24" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/upload_post_btn"
-                android:padding="5dp"
-                android:clickable="false"
-                android:src="@drawable/ic_baseline_send_24"
-                android:background="@drawable/custom_bordered_ripple"
-                android:layout_marginHorizontal="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/custom_bordered_ripple"
+                android:clickable="false"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_send_24" />
 
         </LinearLayout>
 

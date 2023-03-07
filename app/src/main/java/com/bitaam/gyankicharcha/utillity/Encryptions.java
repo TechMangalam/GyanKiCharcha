@@ -1,6 +1,7 @@
 package com.bitaam.gyankicharcha.utillity;
 
 import android.util.Base64;
+import android.util.Log;
 
 public  class Encryptions {
 
@@ -34,6 +35,7 @@ public  class Encryptions {
             pnCounter--;
 
         }
+        Log.d("Test",new String(sarr));
         return new String(sarr);
     }
 
@@ -57,6 +59,7 @@ public  class Encryptions {
             pnCounter--;
 
         }
+        Log.d("Test",new String(Base64.decode(new String(sarr),Base64.NO_WRAP)));
         return new String(Base64.decode(new String(sarr),Base64.NO_WRAP));
     }
 

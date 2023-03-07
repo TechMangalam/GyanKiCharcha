@@ -11,19 +11,19 @@
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Posts" />
 
-    <item
-        android:id="@+id/navigation_gyan"
-        android:icon="@drawable/ic_baseline_collections_bookmark_24"
-        android:title="Gyan" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_gyan"-->
+<!--        android:icon="@drawable/ic_baseline_collections_bookmark_24"-->
+<!--        android:title="Gyan" />-->
 
-    <item
-        android:id="@+id/navigation_mycourse"
-        android:icon="@drawable/ic_baseline_storage_24"
-        android:title="MyCourse" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_mycourse"-->
+<!--        android:icon="@drawable/ic_baseline_storage_24"-->
+<!--        android:title="MyCourse" />-->
 
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_baseline_person_24"
-        android:title="Profile" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_profile"-->
+<!--        android:icon="@drawable/ic_baseline_person_24"-->
+<!--        android:title="Profile" />-->
 
 </menu>
